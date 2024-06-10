@@ -103,3 +103,15 @@ output_file_mito = "/xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/Output_Ba
 # Process, combine, and sort the files, then save to the output file
 process_and_combine_files(file_list_mitochondria, directory, output_file_mito)
 
+#Other files to move
+files_to_move = [
+    "DNA_Archaea_kingdom_sprot.tbl",
+    "DNA_Bacteria_AMR_sprot.tbl",
+    "DNA_Bacteria_IS_sprot.tbl",
+    "DNA_Bacteria_kingdom_sprot.tbl",
+    "HAMAP_bath_bin82.tbl"
+]
+destination_dir = "/xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/Output_Bathsearch_Combined/"
+move_command = "mv " + " ".join([os.path.join(directory, file) for file in files_to_move]) + " " + destination_dir
+os.system(move_command)
+
