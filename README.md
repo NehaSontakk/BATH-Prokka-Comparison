@@ -15,6 +15,8 @@
 
 #### Prokka Pipeline
 
+Prokka (Prokaryotic Genome Annotation Pipeline) is a well known widely used tool designed for rapid annotation of prokaryotic genomes. Prokka identifies and annotates genomic elements such as coding sequences (CDS), transfer RNAs (tRNAs), ribosomal RNAs (rRNAs), and other non-coding features in bacterial, archaeal, and viral genomes. Prokka expects input as preassembled genomic DNA sequences in FASTA format, typically scaffold sequences from de novo assembly software. The tool leverages several external feature prediction tools, including Prodigal for CDS, RNAmmer for rRNA, Aragorn for tRNA, SignalP for signal peptides, and Infernal for non-coding RNA. Although we focus on CDS for our analysis. It uses a hierarchical method for protein annotation, starting with trustworthy user-provided datasets, followed by UniProt bacterial proteins, RefSeq proteins for specific genera, and hidden Markov model profiles from Pfam and TIGRFAMs. Prokka outputs a comprehensive set of files, including FASTA files for original contigs and translated genes, feature tables, GenBank files, GFF files, and summary statistics. 
+
 Prokka is installed through singularity on the HPC for our environment. 
 
        singularity pull library://user/prokka:latest
