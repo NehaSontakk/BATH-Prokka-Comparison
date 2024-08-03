@@ -14,6 +14,16 @@
 ## Step 1: Protein Annotations using BATH and Prokka
 
 #### Prokka Pipeline
+
+Prokka is installed through singularity on the HPC for our environment. 
+
+       singularity pull library://user/prokka:latest
+
+Prokka can be run using: 
+
+      singularity exec prokka.sif prokka --outdir Prokka_output --prefix my_genome genome.fasta
+
+
 #### BATH Pipeline
 
 The BATH pipeline is executed using a SLURM job script. Initially, the DNA input file is processed with Tantan for repeat masking to create a masked DNA file. Tantan is then used to mask protein sequences for various taxonomic groups (Bacteria, Archaea, Viruses, and Mitochondria) and specific functional categories (IS and AMR). This process is repeated for each group and category in the query database.
