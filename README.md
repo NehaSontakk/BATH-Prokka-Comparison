@@ -39,6 +39,8 @@ Bathsearch generates three output files for each query database:
 
 For detailed information on Bathsearch methodology, refer to the specified REFERENCE.
 
+       sbatch tantan_bathsearch.sh 
+
 (Note: The step involving the combination of mitochondrial and tblout files using "combine_BATHhits_diffcodontables.py" is not included.)
 
 ## Step 2: Deduplicating BATH outputs
