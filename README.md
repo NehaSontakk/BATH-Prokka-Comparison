@@ -21,7 +21,7 @@ Prokka is installed through singularity on the HPC for our environment.
 
 Prokka can be run using: 
 
-      singularity exec prokka.sif prokka --outdir Prokka_output --prefix my_genome genome.fasta
+      singularity exec /home/u13/nsontakke/prokka.sif prokka --outdir Prokka_output --prefix my_genome genome.fasta
 
 
 #### BATH Pipeline
