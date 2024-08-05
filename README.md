@@ -45,6 +45,24 @@ For detailed information on Bathsearch methodology, refer to the specified REFER
 
 ## Step 2: Deduplicating BATH outputs
 
+A method for filtering and deduplicating genomic data is designed to enhance the accuracy and reliability of sequence alignments by leveraging E-value thresholds and alignment overlap metrics. Initially, an E-value threshold of 0.000001 is applied to exclude low-confidence alignments. Subsequently, the DNA strand (positive or negative) is identified based on alignment positions. For each strand, a series of deduplication steps are performed:
+
+100% Deduplication: Exact duplicates are identified and removed by comparing E-values and scores, retaining only the highest quality alignments.
+70% Deduplication: Alignments with significant overlap (≥70%) are addressed by comparing E-values and sequence lengths, with the more reliable alignment being retained.
+<70% Deduplication: For alignments with minor overlap (0.01% to <70%), adjustments are made to the alignment positions to resolve conflicts, ensuring non-redundancy of the retained alignments.
+
+Each deduplication step is applied to ensure that the final dataset is both comprehensive and non-redundant, providing high-confidence data for subsequent analyses. This method is applied separately to positive and negative strands, allowing for tailored processing and accurate strand-specific results.
+
+      Specify input directory: path to all the .tbl outputs for the 
+Run [BATH_file_deduplication_(Positive_Negative).ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/BATH_file_deduplication_(Positive_Negative).ipynb)
+
 ## Step 3: Aligning BATH and Prokka Annotations
+
+Script performs a comprehensive comparison between genomic annotations produced by Prokka and BATH. 
+
+For both BATH and Prokka outputs. The code generates BED files for different genomic regions, segregates them based on DNA strands, and runs operations to find overlaps and unique annotations between the two datasets using the bedops suite of tools.It combines the resulting files by prefix, ensuring that all directories are created if they don't exist. Finally, the code analyzes the overlapping and unique regions, categorizes them, and visualizes the data with a Venn diagram to provide insights into overlap classification catrgory of each annotation.
+
+      Specify input directory: path to all prokka_annotation.gff file and bath_deduplicated.xlsx file 
+Run [Updated_Contig_comparison_identifying_gaps_Prokka_vs_BATH.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Updated_Contig_comparison_identifying_gaps_Prokka_vs_BATH.ipynb)
 
 ## Step 4: 
