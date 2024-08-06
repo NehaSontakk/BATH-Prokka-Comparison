@@ -65,4 +65,9 @@ For both BATH and Prokka outputs. The code generates BED files for different gen
       Specify input directory: path to all prokka_annotation.gff file and bath_deduplicated.xlsx file 
 Run [Updated_Contig_comparison_identifying_gaps_Prokka_vs_BATH.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Updated_Contig_comparison_identifying_gaps_Prokka_vs_BATH.ipynb)
 
-## Step 4: 
+## Step 4: Comparison of Annotation Coverage by BATH and Prokka per Contig
+
+This script is used to evaluate and compare genomic annotations between Prokka and BATH. The BATH data was separated into positive and negative strands, with start and end positions adjusted accordingly. Prokka annotations were filtered to separate hypothetical proteins from annotated ones. To assess the coverage of annotations on contigs, length of sequence covered by annotations for each contig is calculated. These lengths were used to compute the percentage of each contig covered by Prokka annotations, BATH annotations, and hypothetical proteins (Prokka unannotated regions). The coverage of contigs is visualised using bar plots, depicting the percentage of coverage by different annotation sources and the proportion of unannotated regions. Additionally, we calculated and plotted the number of annotations per contig for both Prokka and BATH.
+
+      Specify input files: path to all prokka_annotations_save, bath_dedup_annotations_save, bath_prokka_alignment
+Run [Contig_coverage_comparison.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Contig_coverage_comparison.ipynb)
