@@ -71,3 +71,7 @@ This script is used to evaluate and compare genomic annotations between Prokka a
 
       Specify input files: path to all prokka_annotations_save, bath_dedup_annotations_save, bath_prokka_alignment
 Run [Contig_coverage_comparison.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Contig_coverage_comparison.ipynb)
+
+## Step 5: Frameshifts
+
+## Step 6: Comparison of alignment length Prokka vs BATH
