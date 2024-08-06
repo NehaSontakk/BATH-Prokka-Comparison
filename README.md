@@ -75,3 +75,8 @@ Run [Contig_coverage_comparison.ipynb](https://github.com/NehaSontakk/BATH-Prokk
 ## Step 5: Frameshifts
 
 ## Step 6: Comparison of alignment length Prokka vs BATH
+
+The script compares the lengths of annotations predicted by BATH, Prokka, and Prodigal, focusing on how these lengths align and differ across different categories of overlaps between the annotations of the two tools. Prokka .faa files, generated as output by the tool, are used to gather the protein sequences for final Prokka annotations. HMMs for HAMAP-specific annotations by Prokka are gathered separately. The script iterates through these, performing sequence alignment between Prodigal ORF amino sequences (also gathered as Prokka output) and Prokka Uniprot protein sequences using phmmer. E-values and alignment lengths are extracted and added to the DataFrame. The script visualizes the comparison between Prodigal ORF lengths and Prokka annotation lengths using scatter plots, highlighting differences and frameshift counts. To ensure comparability with BATH annotations, Prokka amino acid lengths are adjusted by multiplying to match DNA alignment lengths. Scatter plots are then created to compare these adjusted Prokka lengths with BATH lengths and to visualize the distribution of frameshifts.
+
+      The script starts by loading Prokka and BATH annotated data from Excel files into pandas DataFrames. 
+Run [Length_comparison_of_annotations_generated_by_BATH_and_Prokka.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Length_comparison_of_annotations_generated_by_BATH_and_Prokka.ipynb)
