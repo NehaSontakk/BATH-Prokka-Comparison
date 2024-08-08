@@ -80,3 +80,11 @@ The script compares the lengths of annotations predicted by BATH, Prokka, and Pr
 
       The script starts by loading Prokka and BATH annotated data from Excel files into pandas DataFrames. 
 Run [Length_comparison_of_annotations_generated_by_BATH_and_Prokka.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Length_comparison_of_annotations_generated_by_BATH_and_Prokka.ipynb)
+
+## Step 7: Comparison of annotation labels for BATH and Prokka alginments 
+
+This script gathers data where annotations from both BATH and Prokka align. It then compares annotation labels between these two sources at both the text level (direct string comparison) and the functional level (by querying eggNOG database identifiers for corresponding COG (Clusters of Orthologous Groups) annotations using a RESTful API from UniProt).
+A comparison of the COG annotations is conducted by applying custom functions that fetch eggNOG IDs for proteins annotated by both BATH and Prokka, to assess the consistency and accuracy of annotations across the two databases. These comparisons are then recorded and visually represented using a treemap to depict the proportion of matching, mismatching, and missing annotations, providing a clear and informative visualization of the data alignment quality.
+
+The script starts by loading Prokka and BATH annotated data from Excel files into pandas DataFrames. 
+Run [Annotation_Name_Comparison.ipynb](https://github.com/NehaSontakk/BATH-Prokka-Comparison/blob/main/Annotation_Name_Comparison.ipynb)
