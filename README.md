@@ -1,5 +1,8 @@
 # BATH-Prokka-Comparison
 
+TBA: How did I get the bin data? How did I convert the data to the right formats?
+
+
 ## Data and initializations
 
 1. Download query data from [Prokka db](https://github.com/tseemann/prokka/tree/master/db)
