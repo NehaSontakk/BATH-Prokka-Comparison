@@ -9,16 +9,18 @@
 #SBATCH --partition=standard
 
 # Specify the bin file
-bin_file="bin.82"
+bin_files=["bin.82","bin.16","bin.329","bin.121","bin.40", "bin.104"]
 
+for bin_file in"${bin_files[@]}"; do
+(
 
 #Add the prokka running instructions
-singularity exec /home/u13/nsontakke/prokka.sif prokka --outdir Prokka_output --prefix bin152 /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/MAG_Data/bin.158.fa
+singularity exec /home/u13/nsontakke/prokka.sif prokka --outdir Prokka_output --prefix ${bin_file} /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/MAG_Data/${bin_file}
 
 echo "Process started at $(date)"
 
 # Path to the DNA input file
-input_file="/xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/MAG_Data/${bin_file}.fa.fna"
+input_file="/xdisk/twheeler/nsontakke/Prokka_BATH_Comparison_2/MAG_Data/${bin_file}.fa"
 
 # TANTAN
 tantan_exec="/xdisk/twheeler/nsontakke/Software/tantan-49/bin/tantan"
@@ -65,3 +67,7 @@ for ct in "${codon_tables[@]}"; do
 done
 echo "Bathsearch completed at $(date)" &
 wait
+) &
+done
+wait
+echo"All bin files processed."
