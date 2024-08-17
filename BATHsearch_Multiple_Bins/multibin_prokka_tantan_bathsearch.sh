@@ -9,9 +9,10 @@
 #SBATCH --partition=standard
 
 # Specify the bin file
-bin_files=["bin.82","bin.16","bin.329","bin.121","bin.40", "bin.104"]
+bin_files=("bin.82""bin.16""bin.329""bin.121""bin.40""bin.104")
 
-for bin_file in"${bin_files[@]}"; do
+for bin_file in "${bin_files[@]}"; 
+do
 (
 
 #Add the prokka running instructions
