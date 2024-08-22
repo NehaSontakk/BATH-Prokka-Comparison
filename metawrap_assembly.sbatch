@@ -19,3 +19,6 @@ metawrap assembly -1 /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_M
                    -2 /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/CLEAN_FASTQ/SRR10983013_1.fastq.1.unmerged.final.clean.fq \
                    -m 100 -t 16 -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY
 
+# Get stats for the assembly
+mkdir /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/QUAST_OUTPUT
+python /home/u13/nsontakke/miniconda3/bin/quast.py /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY/final_assembly.fasta -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY/QUAST_OUTPUT/
