@@ -19,7 +19,19 @@ metawrap binning -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_Me
                   -t 16 \
                   -a /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY/final_assembly.fasta \
                   --metabat2 \
+                  /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_1.fastq \
+                  /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_2.fastq
+
+metawrap binning -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING \
+                  -t 16 \
+                  -a /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY/final_assembly.fasta \
                   --maxbin2 \
+                  /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_1.fastq \
+                  /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_2.fastq
+
+metawrap binning -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING \
+                  -t 16 \
+                  -a /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/MEGAHIT_ASSEMBLY/final_assembly.fasta \
                   --concoct \
                   /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_1.fastq \
                   /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INPUT_FILE_FORMAT/SRR10983013.fastq_2.fastq
