@@ -40,7 +40,7 @@ metawrap binning -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_Me
 #BIN REFINEMENT
 #Provide output locations for binning of the maxbin metabat2 and concot outputs
 #SPECIFY CONTAMINATION (-x set to 50) AND COMPLETENESS (-c set to 50)
-metawrap bin_refinement -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BIN_REFINEMENT -t 16 -A /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/metabat2_bins/ -B /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INITIAL_BINNING/maxbin2_bins/ -C /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/INITIAL_BINNING/concoct_bins/ -c 50 -x 50
+metawrap bin_refinement -o /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BIN_REFINEMENT -t 16 -A /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/metabat2_bins/ -B /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/maxbin2_bins/ -C /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BINNING/concoct_bins/ -c 50 -x 50
 
 #Find how many bins were produces
 cat /xdisk/twheeler/nsontakke/Prokka_BATH_Comparison/Assembly_MetaWrap/BIN_REFINEMENT/metawrap_50_10_bins.stats | awk '$2>50 && $3<50' | wc -l
